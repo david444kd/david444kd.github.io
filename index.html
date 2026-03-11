@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Давид Кожахметов - Frontend Developer</title>
+    <style>
+      :root {
+        --accent: #016D94;
+        --dark: #2c3e50;
+        --muted: #7f8c8d;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+          Cantarell, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      h1 {
+        font-size: 2.5em;
+        color: #1a1a1a;
+        margin-bottom: 10px;
+        letter-spacing: -0.5px;
+      }
+
+      h2 {
+        font-size: 1.5em;
+        color: var(--accent);
+        margin-top: 30px;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #b3d9ea;
+        padding-bottom: 5px;
+      }
+
+      h3 {
+        font-size: 1.2em;
+        color: var(--dark);
+        margin-top: 20px;
+        margin-bottom: 5px;
+      }
+
+      .subtitle {
+        font-size: 1.2em;
+        color: var(--accent);
+        margin-bottom: 15px;
+      }
+
+      .contact-info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-bottom: 25px;
+        font-size: 0.95em;
+      }
+
+      .contact-info span {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .summary {
+        font-size: 1.05em;
+        line-height: 1.7;
+        margin-bottom: 25px;
+        color: #444;
+      }
+
+      .skills,
+      .key-achievements {
+        margin-bottom: 25px;
+      }
+
+      .skill-category {
+        margin-bottom: 10px;
+      }
+
+      .skill-category strong,
+      .technologies strong {
+        color: var(--dark);
+      }
+
+      .key-achievements ul {
+        list-style: none;
+        margin-top: 10px;
+      }
+
+      .key-achievements li,
+      .achievements li {
+        position: relative;
+        padding-left: 20px;
+        line-height: 1.5;
+      }
+
+      .key-achievements li {
+        margin-bottom: 12px;
+      }
+
+      .key-achievements li:before,
+      .achievements li:before {
+        position: absolute;
+        left: 0;
+        color: var(--accent);
+      }
+
+      .key-achievements li:before {
+        content: '★';
+        font-size: 0.85em;
+      }
+
+      .experience-item {
+        margin-bottom: 30px;
+      }
+
+      .job-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-wrap: wrap;
+        margin-bottom: 5px;
+      }
+
+      .job-title {
+        font-weight: bold;
+        color: var(--dark);
+      }
+
+      .company {
+        color: var(--muted);
+        font-weight: normal;
+      }
+
+      .date {
+        color: var(--muted);
+        font-style: italic;
+        font-size: 0.95em;
+      }
+
+      .company-description {
+        color: #666;
+        font-size: 0.95em;
+        font-style: italic;
+        margin-top: 6px;
+        margin-bottom: 10px;
+      }
+
+      .achievements {
+        list-style: none;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      .achievements li {
+        margin-bottom: 8px;
+      }
+
+      .achievements li:before {
+        content: '•';
+        font-weight: bold;
+      }
+
+      .technologies {
+        margin-top: 10px;
+        font-size: 0.95em;
+      }
+
+      .education,
+      .languages {
+        margin-bottom: 20px;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .contact-info a {
+        text-decoration: underline;
+      }
+
+      @media print {
+        body {
+          padding: 20px;
+        }
+
+        h2,
+        h3,
+        .job-header,
+        .date {
+          page-break-after: avoid;
+        }
+
+        .achievements {
+          page-break-inside: auto;
+        }
+
+        .achievements li {
+          page-break-inside: avoid;
+          page-break-after: auto;
+        }
+
+        .technologies {
+          page-break-inside: avoid;
+          page-break-before: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Давид Кожахметов</h1>
+      <p class="subtitle">Frontend Developer</p>
+      <div class="contact-info">
+        <span>📧 dkozahmetov132@gmail.com</span>
+        <span><a href="https://t.me/daviddevv"target="_blank" rel="noopener noreferrer">Telegram</a></span>
+        <span><a href="https://www.linkedin.com/in/david-kozhakhmetov-b0178b395/" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
+        <span><a href="https://github.com/david444kd" target="_blank" rel="noopener noreferrer">GitHub</a></span>
+        <span>📍 Казахстан</span>
+      </div>
+    </header>
+    <section>
+          <h2>КЛЮЧЕВЫЕ ДОСТИЖЕНИЯ</h2>
+          <div class="key-achievements">
+            <ul>
+              <li>
+                Спроектировал и реализовал с нуля админ-панель для SkinMarket — Первого Казахстанского P2P-маркетплейса скинов внутри Wooppay Wallet. Задача пришла без готовых спецификаций: самостоятельно проработал требования с продактом и бэкенд-командой, определил структуру данных и интерфейс модерации.
+              </li>
+              <li>
+                Предложил и провёл рефакторинг внутренней дизайн-системы (WOOPPAY): сократил размер бандла с 450KB до 150KB, переиспользуемость компонентов выросла с 30% до 85%.
+              </li>
+              <li>
+                Разработал с нуля фронтенд системы автоматизации заказов в Linker.kz (команда из 4 разработчиков, early-stage) — система позволила клиентам сократить расходы на менеджеров и потерю заказов в ~2 раза.
+              </li>
+            </ul>
+          </div>
+    </section>
+    <section>
+      <h2>ОПЫТ РАБОТЫ</h2>
+
+      <div class="experience-item">
+        <div class="job-header">
+          <h3>
+            <span class="job-title">Frontend Developer</span> |
+            <span class="company">WOOPPAY</span> | On-site
+          </h3>
+        </div>
+        <p class="date">Март 2025 — настоящее время</p>
+        <p class="company-description">Ведущая fintech-компания Казахстана — B2B и B2C платёжные решения для финансового сектора и телекома.</p>
+        <ul class="achievements">
+          <li>
+            Провёл архитектурный рефакторинг внутреннего кабинета поддержки (40+ страниц, легаси-кодовая база) — декомпозировал монолитную структуру на независимые feature-модули, оптимизировал сетевые запросы и устранил узкие места рендеринга. По оценке команды, скорость разработки новых фич выросла примерно на 30%.
+          </li>
+          <li>
+            Спроектировал и реализовал с нуля админ-панель для SkinMarket (P2P-маркетплейс скинов в Wooppay Wallet) — от проработки требований с продактом и бэкенд-командой до релиза.
+          </li>
+          <li>
+            Инициировал внедрение инженерных стандартов: шаблоны MR, правила линтинга, архитектурные гайдлайны. Проводил код-ревью для 2 junior-разработчиков — время выхода новичков на самостоятельные задачи сократилось.
+          </li>
+          <li>
+            Предложил и провёл рефакторинг внутренней дизайн-системы: сократил размер бандла с 450KB до 150KB, переиспользуемость компонентов выросла с 30% до 85%.
+          </li>
+          <li>
+            Совместно с командой поднял покрытие тестами ключевых проектов с ~40% до 93% в рамках задачи по стабилизации продукта и устранения техдолга.
+          </li>
+        </ul>
+        <p class="technologies">
+          <strong>Технологии:</strong> TypeScript, React, Next.js, Zustand,
+          TanStack Query, TanStack Table, react-hook-form, Tailwind CSS, styled-components,
+          Sass, Storybook, Vitest, RTL, Jest, Sentry, Rollup, i18next, Docker
+        </p>
+      </div>
+
+      <div class="experience-item">
+        <div class="job-header">
+          <h3>
+            <span class="job-title">Frontend Developer</span> |
+            <span class="company">Linker.kz</span> | Remote
+          </h3>
+        </div>
+        <p class="date">Октябрь 2024 — Февраль 2025</p>
+        <p class="company-description">SaaS-платформа автоматизации бизнес-процессов для малого и среднего бизнеса.</p>
+        <ul class="achievements">
+          <li>
+            Разрабатывал с нуля фронтенд системы автоматизации заказов с автоматическим онбордингом — готовых референсов не было, совместно с CTO определяли архитектуру, пользовательские сценарии и структуру данных. Система позволила клиентам сократить расходы на менеджеров и потерю заказов в ~2 раза.
+          </li>
+          <li>
+            Реализовал checkout-флоу (мультишаговые формы, валидация, состояния ошибок) с mobile-first подходом. Настроил кэширование через React Query и lazy loading тяжёлых компонентов — время начальной загрузки сократилось с 4.8 до 1.6 секунд.
+          </li>
+          <li>
+            Предложил и внедрил практики accessibility (семантический HTML, клавиатурная навигация, ARIA-атрибуты) в общие компоненты — до этого a11y в проекте не учитывалась.
+          </li>
+        </ul>
+        <p class="technologies">
+          <strong>Технологии:</strong> TypeScript, React, Next.js, TanStack Query,
+          Tailwind CSS, i18next
+        </p>
+      </div>
+
+      <div class="experience-item">
+        <div class="job-header">
+          <h3>
+            <span class="job-title">Frontend Developer</span> |
+            <span class="company">Greatleads</span> | Remote
+          </h3>
+        </div>
+        <p class="date">Март 2023 — Сентябрь 2024</p>
+        <p class="company-description">BizDev-агентство, специализирующееся на выходе технологических компаний на рынки Латинской Америки, MENA и APAC.</p>
+        <ul class="achievements">
+          <li>
+            Отвечал за весь фронтенд-скоуп: вёл полный цикл разработки маркетинговых лендингов и мультишаговых интерфейсов — от приёмки макетов в Figma до деплоя. Самостоятельно выбирал технические решения и приоритизировал задачи.
+          </li>
+          <li>
+            Построил мультишаговые интерфейсы с клиентской валидацией и трекингом аналитики для кампаний на рынке Латинской Америки — первый опыт работы с i18n и локализацией на уровне продукта.
+          </li>
+          <li>
+            Разработал общую библиотеку компонентов (формы захвата лидов, баннеры, мультишаговые UI), которая стала основой для последующих проектов агентства.
+          </li>
+        </ul>
+        <p class="technologies">
+          <strong>Технологии:</strong> TypeScript, React, Next.js, Tailwind CSS,
+          Material UI, shadcn/ui, Sass, Jest, i18next
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>О СЕБЕ</h2>
+      <p class="summary">
+        Frontend-разработчик с 3+ годами опыта в fintech и SaaS. Работал над платёжными интерфейсами, внутренними кабинетами и дизайн-системами в командах от 3 до 6 человек. Имею опыт построения масштабируемых архитектур на React и TypeScript, рефакторинге legacy-систем и внедрении инженерных стандартов.
+      </p>
+    </section>
+
+    <section>
+      <h2>НАВЫКИ</h2>
+      <div class="skills">
+        <div class="skill-category">
+          <strong>Frontend:</strong> React, TypeScript, Next.js,
+    JavaScript (ES6+),
+          Zustand, TanStack Query, TanStack Table, react-hook-form
+        </div>
+        <div class="skill-category">
+          <strong>Архитектура:</strong> Feature-Sliced Design, Clean
+     Architecture, Design Systems, Storybook
+        </div>
+        <div class="skill-category">
+          <strong>Стилизация:</strong> Tailwind CSS,
+    styled-components, Sass, shadcn/ui
+        </div>
+        <div class="skill-category">
+          <strong>Тестирование:</strong> Vitest, React Testing
+    Library, Jest
+        </div>
+        <div class="skill-category">
+          <strong>Инструменты:</strong> Git, Docker, Vite, Rollup, Sentry,
+          GitLab CI, i18next
+        </div>
+      </div>
+    </section>
+
+    <section>
+        <h2>ОБРАЗОВАНИЕ</h2>
+        <div class="education">
+            <h3>Bachelor's degree, Information Technology</h3>
+            <p>Abylkas Saginov Karaganda Technical University, Kazakhstan | 2021 - 2025</p>
+        </div>
+    </section>
+
+    <section>
+      <h2>ЯЗЫКИ</h2>
+      <div class="languages">
+        <p><strong>Английский:</strong> B2 (Upper-Intermediate)</p>
+        <p><strong>Русский:</strong> Родной</p>
+      </div>
+    </section>
+  </body>
+</html>
